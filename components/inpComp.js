@@ -1,18 +1,13 @@
-import {
-    Text,
-    View,
-    TextInput,
-    StyleSheet
-  } from "react-native";
-function InputComp({placeholder,lable,multilineBool,textChange}) {
+import { Text, View, TextInput, StyleSheet } from "react-native";
+function InputComp({ placeholder, lable, multilineBool, textChange }) {
   return (
     <View style={styles.container}>
       <Text
         style={{
-          color: "black",
+          color: "grey",
           fontWeight: "bold",
-          fontSize: 15,
-          marginBottom: 5,
+          fontSize: 11,
+          marginBottom: 1,
         }}
       >
         {lable}
@@ -26,7 +21,8 @@ function InputComp({placeholder,lable,multilineBool,textChange}) {
         //returnKeyType={returnKeyType}
         //onSubmitEditing={onSubmitEditing}
         multiline={multilineBool}
-       placeholder={placeholder}
+        
+        
         //keyboardType={keyboardType}
         //value={text || value}
         style={styles.inputStyle}
@@ -36,16 +32,20 @@ function InputComp({placeholder,lable,multilineBool,textChange}) {
 }
 
 const styles = StyleSheet.create({
-    container:{
-        paddingHorizontal:10,
-        marginBottom:7
-    },
-    inputStyle:{
-        fontSize:15,
-        paddingLeft:10,
-        borderWidth:.5,
-        borderColor:"black"
-    }
-})
+  container: {
+    paddingHorizontal: 10,
+    marginVertical:7,
+    
+    width: "90%",
+    alignSelf: "center",
+  },
+  inputStyle: {
+    fontSize: 15,
+    paddingLeft: 0,
+    borderBottomWidth: 0.7,
+    borderColor: "black",
+    fontWeight: "bold",
+  },
+});
 
 export default InputComp;

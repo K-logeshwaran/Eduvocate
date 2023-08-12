@@ -1,27 +1,38 @@
-import { View, Text,StyleSheet } from "react-native";
+import { View, Image, StyleSheet } from "react-native";
+import Seperator from "./seperator";
 
 function HeaderBar() {
   return (
     <View style={styles.container}>
-      <Text style={styles.txt}>Scanning Appp</Text>
+      
+      
+        <Image
+          style={{
+            width: 45,
+            height: 45,
+            borderRadius:50,
+          }}
+          source={require("../assets/logo.png")}
+        ></Image>
+      
+      
     </View>
   );
 }
 const styles = StyleSheet.create({
-    container:{
-        height:75,
-        backgroundColor:"#fff",
-        paddingTop:27.5,
-        borderStyle:"solid",
-        borderBottomWidth:1,
-        borderBottomColor:'#f2f2f2'
-    },
-    txt:{
-        fontSize:20,
-        fontWeight:"900",
-        paddingLeft:10,
-        color:"rgba(0,0,0,.7)"
-    }
+  container: {
+    flexDirection: "row",
+    alignItems:"center",
+    justifyContent:"center",
+    paddingVertical:20,
+    position: "absolute",
+    top: "0%",
+    width: "90%",
+    alignSelf:"center",
+    borderBottomWidth:1.7,
+    borderBottomColor:"#bdc1c3"
+  },
 
-})
+
+});
 export default HeaderBar;
